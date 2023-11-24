@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+:root{
+    --primary: rgb(137, 8, 243);
+    --secondary: rgb(181, 129, 224);
+    --shade: rgb(231, 230, 233);
+    --tint: rgb(241, 240, 243);
+    --text-color-h: rgb(68, 65, 70);
+    --text-color-b: rgb(96, 94, 97);
+
+    --transition: .2s ease all;
+}
+
+button{
+    border: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    display: flex;
+    height: 3.5rem;
+    background-color: var(--primary);
+    color: var(--tint);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+:any-link{
+    text-decoration: none;
+}
+
+.nav__links{
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav__links li{
+    list-style-type: none;
+    
+}
+
+.nav__links li a{
+    color: var(--tint);
+    transition: color var(--transition);
+}
+
+.nav__links li a:hover{
+    color: var(--secondary);
+}
+
+.container{
+    position: relative;
+    margin: auto;
+    margin-top: 5rem;
+    width: 60%;
+    box-shadow: 0px 5px 20px rgb(0 0 0 / .1);
+    border-radius: 5px;
+    height: 500px;
+    padding: 1rem;
+}
+
+.search__container{
+    height: 50px;
+}
+
+input[type="search"]{
+    width: 20rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    padding: .5rem;
+    background-color: var(--tint);
+    transition: background-color var(--transition);
+}
+
+input[type="search"]:focus{
+    background-color: var(--shade);
+}
+
+button[type = "submit"]{
+    width: 80px;
+    height: 2rem;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--secondary);
+    color: var(--tint);
+    font-size: 1rem;
+    transition: background-color var(--transition);
+}
+button[type = "submit"]:hover{
+    background-color: var(--primary);
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table thead th{
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--tint);
+    color: var(--text-color-h);
+}
+
+td{
+    padding: 1rem;
+    color: var(--text-color-b);
+}
+
+.add__todo__container{
+    position: absolute;
+    display: none;
+    inset: 0;
+    margin: auto;
+    padding: 1.5rem;
+    width: 80%;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 100px rgb(0 0 0 / .5);
+
+}
+.action__btn{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-h);
+    background-color: var(--tint);
+    font-size: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.action__btn:hover{
+    background-color: var(--shade);
+}
+
+.action__btn:active{
+    outline: 2px solid var(--shade);
+}
+
+.close__todo__btn{
+    top: .5rem;
+    right: .5rem;
+}
+
+.add__todo__button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+    color: white;
+    box-shadow: -5px 0 20px rgb(0 0 0 / .1);
+    cursor: pointer;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.add__todo__form{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+input[type="date"], input[type="time"]{
+    cursor: pointer;
+}
+
+.add__todo__form input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--tint);
+    padding: .5rem;
+}
+
+.add__todo__form textarea{
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--tint);
+    padding: .5rem;
+}
+
+.todo__dates__group{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
