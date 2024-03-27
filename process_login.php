@@ -1,6 +1,5 @@
 <?php 
 require_once './config.php';
-require_once './helpers/redirect.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $mysqli = db();

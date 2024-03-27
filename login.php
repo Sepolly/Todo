@@ -18,6 +18,7 @@
             <input type="password" name="password" id="">
         </label>
         <button type="submit">login</button>
+        <p>Don't have an account? <a href="signup.php">sign up</a></p>
     </form>
 </body>
 </html>
